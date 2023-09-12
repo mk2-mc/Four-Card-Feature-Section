@@ -61,9 +61,7 @@ header p {
 }
 
 .card-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
   gap: 2rem;
   margin-top: 5rem;
 }
@@ -82,22 +80,18 @@ header p {
 
 .card-supervisor {
   --clr-card: var(--clr-cyan);
-  grid-area: card-1;
 }
 
 .card-team {
   --clr-card: var(--clr-red);
-  grid-area: card-2;
 }
 
 .card-karma {
   --clr-card: var(--clr-orange);
-  grid-area: card-3;
 }
 
 .card-calculator {
   --clr-card: var(--clr-blue);
-  grid-area: card-4;
 }
 
 .card::before {
@@ -120,9 +114,14 @@ header p {
   margin-left: auto;
 }
 
+@media only screen and (min-width: 56.25em) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media only screen and (min-width: 75em) {
   .card-container {
-    display: grid;
     grid-template-areas: 
     "card-1 card-2 card-4"
     "card-1 card-3 card-4";
@@ -130,5 +129,21 @@ header p {
   
   .card-supervisor, .card-calculator {
     align-self: center;
+  }
+  
+  .card-supervisor {
+    grid-area: card-1;
+  }
+
+  .card-team {
+    grid-area: card-2;
+  }
+
+  .card-karma {
+    grid-area: card-3;
+  }
+
+  .card-calculator {
+    grid-area: card-4;
   }
 }
