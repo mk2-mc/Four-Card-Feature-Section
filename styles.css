@@ -1,0 +1,134 @@
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+   
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(0, 0%, 98%);
+  --clr-neutral-400: hsl(229, 6%, 66%);
+  --clr-neutral-600: hsl(234, 12%, 34%);
+  
+  --clr-shadow: hsl(212, 39%, 89%);
+  
+  --ff-base: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: var(--ff-base);
+  font-size: 0.938rem;
+  line-height: 1.7;
+  color: var(--clr-neutral-400);
+  background-color: var(--clr-neutral-200);
+}
+
+h1, h2, h3 {
+  color: var(--clr-neutral-600);
+}
+
+h1, h2 {
+  line-height: 1.5;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+header {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+header p {
+  max-width: 32rem;
+  margin-top: 1.25rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 21.875rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: var(--clr-neutral-100);
+  box-shadow: 0 1rem 1.25rem -0.313rem var(--clr-shadow);
+}
+
+.card-supervisor {
+  --clr-card: var(--clr-cyan);
+  grid-area: card-1;
+}
+
+.card-team {
+  --clr-card: var(--clr-red);
+  grid-area: card-2;
+}
+
+.card-karma {
+  --clr-card: var(--clr-orange);
+  grid-area: card-3;
+}
+
+.card-calculator {
+  --clr-card: var(--clr-blue);
+  grid-area: card-4;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--clr-card);
+}
+
+.card p {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.icon {
+  margin-top: 3rem;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 75em) {
+  .card-container {
+    display: grid;
+    grid-template-areas: 
+    "card-1 card-2 card-4"
+    "card-1 card-3 card-4";
+  }
+  
+  .card-supervisor, .card-calculator {
+    align-self: center;
+  }
+}
