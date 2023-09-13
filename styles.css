@@ -34,11 +34,11 @@ body {
 }
 
 h1, h2, h3 {
+  line-height: 1.4;
   color: var(--clr-neutral-600);
 }
 
 h1, h2 {
-  line-height: 1.5;
   font-size: clamp(1.5rem, 4vw, 2.25rem);
 }
 
@@ -47,7 +47,7 @@ h1 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
 }
 
 header {
@@ -57,13 +57,13 @@ header {
 
 header p {
   max-width: 32rem;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
 .card-container {
   display: grid;
   gap: 2rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .card {
@@ -105,12 +105,12 @@ header p {
 }
 
 .card p {
-  margin-top: 0.3rem;
+  margin-top: 0.6rem;
   font-size: 0.8rem;
 }
 
 .icon {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
   margin-left: auto;
 }
 
