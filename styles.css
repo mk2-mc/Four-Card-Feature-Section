@@ -21,10 +21,10 @@
 }
 
 body {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
   padding: 2rem;
   font-family: var(--ff-base);
   font-size: 0.938rem;
