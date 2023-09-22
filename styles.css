@@ -59,7 +59,7 @@ header {
   font-weight: 600;
 }
 
-header p {
+.header-description {
   max-width: 32rem;
   margin-top: 1rem;
 }
